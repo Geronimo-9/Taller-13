@@ -3,13 +3,21 @@ import Detalles.mostrarDetalles;
 
 public abstract class Figura {
 
-public abstract double calcularArea();
+    public abstract double calcularArea();
 
+    /*public abstract void areas(){
+        System.out.println("Camion");
+    }*/
+
+    /* No es posible definir metodos con cuerpo en una clase abstracta porque
+    el metodo no debe tener un cuerpo ya que es un modelo referente que las clases hijas puedan
+    implementarlas con la misma firma y esas clases tengan algo en común.
+    *
+    *
+    * */
 
 
 }
-
-
 //Clase Rectangulo
 class Rectangulo extends Figura implements mostrarDetalles{
     protected double largo;
@@ -50,7 +58,6 @@ public Triangulo(double lado_1,double lado_2){
     public void mostrarDetalles() {
         System.out.println("El area del triangulo es: "+calcularArea());
     }
-
 
 
 }
